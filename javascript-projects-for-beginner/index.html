@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .shapes-6 {  
+      width: 40px;
+      height: 40px;
+      color: #25b09b;
+      position: relative;
+      background: linear-gradient(currentColor 0 0) center/100% 10px,
+        linear-gradient(currentColor 0 0) center/10px 100%;
+      background-repeat: no-repeat;
+    }
+    .shapes-6:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(currentColor 0 0) 0   0,
+        linear-gradient(currentColor 0 0) 100% 0,
+        linear-gradient(currentColor 0 0) 0   100%,
+        linear-gradient(currentColor 0 0) 100% 100%;
+      background-size: 15.5px 15.5px;
+
+      background-repeat: no-repeat;
+      animation: sp6 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+    }
+    @keyframes sp6 {
+      33% {
+        inset: -10px;
+        transform: rotate(0deg);
+      }
+      66% {
+        inset: -10px;
+        transform: rotate(90deg);
+      }
+      100% {
+        inset: 0;
+        transform: rotate(90deg);
+      }
+    }
+  </style>
+  <body>
+    <div class="shapes-6"></div>
+  </body>
+</html>
+<script></script>
